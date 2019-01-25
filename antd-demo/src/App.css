@@ -1,0 +1,40 @@
+
+.App {
+  text-align: center;
+}
+.logo_div{
+  text-align: center;
+  margin: 10px;
+  padding: 5px;
+  background: rgb(123, 186,202);
+  border-radius:3px; 
+
+}
+.logo_div > div{
+    font-size:18px;
+    color: gold;
+    margin-top: 10px;
+}
+#components-layout-demo-custom-trigger .trigger {
+  font-size: 18px;
+  line-height: 64px;
+  padding: 0 24px;
+  cursor: pointer;
+  transition: color .3s;
+}
+
+#components-layout-demo-custom-trigger .trigger:hover {
+  color: #1890ff;
+}
+
+#components-layout-demo-custom-trigger .logo {
+  height: 32px;
+  background: rgba(255,255,255,.2);
+  margin: 16px;
+}
+.contentCss{
+  overflow-y: scroll;
+  width: 100%;
+  padding-top: 16px;
+  height:90vh;
+}
