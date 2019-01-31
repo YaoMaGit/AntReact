@@ -21,9 +21,13 @@ const menu = (
   </Menu>
 );
 class BasicRoute extends Component {
-  state = {
-    collapsed: false,
+  constructor(props) {
+    super(props);
+    this.state = {
+      collapsed: false,
+    };
   };
+
 
   toggle = () => {
     this.setState({
@@ -46,18 +50,18 @@ class BasicRoute extends Component {
             <div>回收工单管理平台</div>
           </div>
           <Menu
-            defaultSelectedKeys={['0']}
+            defaultSelectedKeys={[this.props.location.pathname]}
             defaultOpenKeys={['0']}
             mode="inline"
             theme="dark"
             inlineCollapsed={this.state.collapsed}
           >
-            <Menu.Item key="0">
-              <Link to="/home" replace><Icon type="mail" /><span>控制台</span></Link>
+            <Menu.Item key="/api/home">
+              <Link to="/api/home" replace><Icon type="mail" /><span>控制台</span></Link>
             </Menu.Item>
             <SubMenu key="sub1" title={<span><Icon type="mail" /><span>回收管理</span></span>}>
-              <Menu.Item key="1">
-                <Link to="/Recover" replace><span>回收工单管理</span></Link>
+              <Menu.Item key="/api/recover">
+                <Link to="/api/recover" replace><span>回收工单管理</span></Link>
               </Menu.Item>
               <Menu.Item key="2">货品类型</Menu.Item>
               <Menu.Item key="3">货品管理</Menu.Item>
@@ -82,9 +86,9 @@ class BasicRoute extends Component {
               <Menu.Item key="14">产品说明</Menu.Item>
             </SubMenu>
             <SubMenu key="sub6" title={<span><Icon type="appstore" /><span>后台管理</span></span>}>
-                <Menu.Item key="15">管理员管理</Menu.Item>
-                <Menu.Item key="16">权限管理</Menu.Item>
-              </SubMenu>
+              <Menu.Item key="15">管理员管理</Menu.Item>
+              <Menu.Item key="16">权限管理</Menu.Item>
+            </SubMenu>
           </Menu>
         </Sider>
         <Layout>

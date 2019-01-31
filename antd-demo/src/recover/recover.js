@@ -19,7 +19,7 @@ class page extends React.Component {
     constructor(props) {
         super(props);
         this.state = {
-            activeTab: gutterTab[0].type,
+            activeTab: '0',
         }
     };
     gutterboxClk(index) {
@@ -75,7 +75,7 @@ class page extends React.Component {
                         <Component1 listData={this.state.activeTab}></Component1>
                     </div> */}
                     <div>
-                        <RecoverList listData={this.state.activeTab} />
+                        <RecoverList PropsType={this.state.activeTab} />
                     </div>
                 </div>
             </div>

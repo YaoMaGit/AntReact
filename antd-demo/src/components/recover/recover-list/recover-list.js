@@ -1,6 +1,6 @@
 import React from 'react';
 import {
-    Table, Input, InputNumber, Popconfirm, Form,
+    Table, Input, InputNumber, Form,
 } from 'antd';
 
 let data = [];
@@ -160,9 +160,8 @@ class EditableTable extends React.Component {
     }
     componentWillReceiveProps(nextProps) {
         data = []
-        console.log(this.props.listData)
-        // this.setState({ tab: this.props.listData })
-        for (let i = 0; i < this.props.listData; i++) {
+        console.log(this.props.PropsType)
+        for (let i = 0; i < Math.floor(Math.random()*10)*2; i++) {
             data.push({
                 key: i.toString(),
                 id: `2018011081107-${i}`,
