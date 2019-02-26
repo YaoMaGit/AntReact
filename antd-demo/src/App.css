@@ -36,5 +36,7 @@
   overflow-y: scroll;
   width: 100%;
   padding-top: 16px;
+  padding-left:16px;
+  padding-right:16px;
   height:90vh;
 }

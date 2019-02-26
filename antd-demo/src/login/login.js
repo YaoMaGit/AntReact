@@ -1,7 +1,6 @@
 
 import React, { Component } from 'react';
 import { Input, Icon, Button, notification } from 'antd';
-import { history  } from 'react-router-dom'
 
 import './login.less'
 import BGParticle from './BGParticle.js';
@@ -34,7 +33,7 @@ class page extends Component {
     loginClk = () => {
         console.log(this.state.userName)
         console.log(this.state.PassWord)
-        this.context.history.pushState(null, '/home')
+        // this.context.history.pushState(null, '/home')
     }
     emitEmptyUser = () => {
         this.userNameInput.focus();

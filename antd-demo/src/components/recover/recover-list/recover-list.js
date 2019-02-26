@@ -2,7 +2,7 @@ import React from 'react';
 import {
     Table, Input, InputNumber, Form,
 } from 'antd';
-
+import fetch from 'isomorphic-fetch';
 let data = [];
 
 const FormItem = Form.Item;
@@ -139,10 +139,10 @@ class EditableTable extends React.Component {
                 dataIndex: 'op',
                 width: '5%',
                 render: (text, record) => {
-                    const editable = this.isEditing(record);
+                    // const editable = this.isEditing(record);
                     return (
                         <div>
-                            <a onClick={() => this.edit(record.key)}>详情</a>
+                            <a href="#" onClick={() => this.edit(record.key)}>详情</a>
                         </div>
                     );
                 },
@@ -158,10 +158,17 @@ class EditableTable extends React.Component {
     edit(key) {
         this.setState({ editingKey: key });
     }
+    componentDidMount() {
+        fetch('https://www.easy-mock.com/mock/5c650909ba4cdf7f48aa6cb5/api/goodslist')
+            .then((response) => response.json())
+            .then((json) => {
+                console.log(json)
+            })
+    }
     componentWillReceiveProps(nextProps) {
         data = []
         console.log(this.props.PropsType)
-        for (let i = 0; i < Math.floor(Math.random()*10)*2; i++) {
+        for (let i = 0; i < Math.floor(Math.random() * 10) * 2; i++) {
             data.push({
                 key: i.toString(),
                 id: `2018011081107-${i}`,
@@ -181,7 +188,7 @@ class EditableTable extends React.Component {
         }
 
         this.setState({
-            data:data
+            data: data
         })
     }
     render() {
@@ -217,9 +224,7 @@ class EditableTable extends React.Component {
                 rowClassName="editable-row"
                 className="tbCss"
                 size="middle"
-
             />
-
         );
     }
 }

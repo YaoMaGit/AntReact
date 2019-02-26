@@ -63,9 +63,9 @@ class BasicRoute extends Component {
               <Menu.Item key="/api/recover">
                 <Link to="/api/recover" replace><span>回收工单管理</span></Link>
               </Menu.Item>
-              <Menu.Item key="2">货品类型</Menu.Item>
-              <Menu.Item key="3">货品管理</Menu.Item>
-              <Menu.Item key="4">已回收货品</Menu.Item>
+              <Menu.Item key="/api/quality-type"><Link to="/api/quality-type" replace><span>货品类型</span></Link></Menu.Item>
+              <Menu.Item key="/api/quality-manage"><Link to="/api/quality-manage" replace><span>货品管理</span></Link></Menu.Item>
+              <Menu.Item key="/api/over-recover-quality"><Link to="/api/over-recover-quality" replace><span>已回收货品</span></Link></Menu.Item>
             </SubMenu>
             <SubMenu key="sub2" title={<span><Icon type="mail" /><span>商家管理</span></span>}>
               <Menu.Item key="5">商家管理</Menu.Item>
@@ -128,7 +128,6 @@ class BasicRoute extends Component {
           <Content style={{
             margin: '16px 16px', background: '#fff',
           }}
-
           >
 
             <div className="contentCss" >
