@@ -8,7 +8,7 @@
     "echarts": "^4.2.0-rc.2",
     "echarts-for-react": "^2.0.15-beta.0",
     "es6-promise": "^4.2.5",
-    "gsap": "^2.0.2",
+    "gsap": "^3.6.0",
     "isomorphic-fetch": "^2.2.1",
     "nprogress": "^0.2.0",
     "react": "^16.7.0",
